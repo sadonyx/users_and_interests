@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <title><%= @user_name ? @user_name.capitalize : "Users" %></title>
+  </header>
+  <body>
+    <%= yield %>
+    <h4>Other Users</h4>
+    <ul>
+      <% @users.each do |name, _| %>
+        <% unless name == @user_name %>
+          <li>
+            <a href=<%= name %>><%= name.capitalize %></a>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </body>
+</html>

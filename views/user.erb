@@ -1,0 +1,12 @@
+<h2>Details for <%= @user_name.capitalize %></h2>
+
+<h4>Email address:</h4>
+<p><%= @email %></p>
+
+<h4>Interests</h4>
+<p>
+  <% @interests.each do |interest| %>
+        <%= interest == @interests.last ? "and #{interest}." : "#{interest}," %>
+  <% end %>
+</p>
+<a href="/users">Return to home</a>

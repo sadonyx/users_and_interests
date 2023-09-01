@@ -1,0 +1,28 @@
+<h2>Users</h2>
+<ul>
+  <% @users.keys.each do |name| %>
+    <li>
+      <a href=<%= name %>><%= name.capitalize %></a>
+    </li>
+  <% end %>
+</ul>
+
+<h3>Add new user:</h3>
+<form action="/new-user" method="post">
+    <dl>
+      <dt><label for="name">Name</label></dt>
+      <dd><input type="text" name="name" id="name" placeholder="John" required></dd>
+    </dl>
+
+    <dl>
+      <dt><label for="email">Email address</label></dt>
+      <dd><input type="email" name="email" id="email" placeholder="johndoe@email.com" required></dd>
+    </dl>
+
+    <dl>
+      <dt><label for="interests">Interests</label></dt>
+      <dd><input type="text" name="interests" id="interests" placeholder="biking, reading, dancing" required></dd>
+    </dl>
+
+    <input name="submit" type="submit">
+</form>

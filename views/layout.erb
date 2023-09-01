@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <title><%= @user_name ? @user_name.capitalize : "Users" %></title>
+  </header>
+  <body>
+    <%= yield %>
+    <p>There are <%= @users.size %> users with a total of <%= count_interests %> interests.</p>
+  </body>
+</html>
