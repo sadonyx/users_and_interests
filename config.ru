@@ -1,2 +1,2 @@
-require "./users_and_interests"
+require "./users"
 run Sinatra::Application
